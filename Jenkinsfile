@@ -9,7 +9,6 @@ pipeline {
         stage('maven build') {
             when {
                 branch 'dev'
-                environment name: 'qa_TO', value: 'qa'
             }
             steps {
                 sh 'mvn clean package'
@@ -17,8 +16,7 @@ pipeline {
         }
         stage('tomcat-deploy') {
             when {
-                branch 'production'
-                environment name: 'production_TO', value: 'production'
+                branch 'devlop'
             }
             steps {
             echo "hello this is tom cat deploy"
