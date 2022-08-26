@@ -11,12 +11,12 @@ pipeline {
             }
     stage("Maven Build"){
       steps{
-        sh "mvn clean package"
+        echo "hey ankith"
       }
     }
     stage("Deploy To Dev"){
       steps{
-        tomcatDeploy("tomcat-dev","ec2-user",["172.31.13.89","172.31.13.89"])
+        echo "hello world"
       }
     }
   }
