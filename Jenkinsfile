@@ -1,4 +1,4 @@
-//* pipeline {
+pipeline {
     agent any
     stages {
         stage('maven build') {
@@ -18,4 +18,4 @@
             }
         }
     }
-} //*
+}
