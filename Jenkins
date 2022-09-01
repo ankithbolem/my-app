@@ -1,0 +1,13 @@
+pipeline{
+    agent any
+    stages{
+        stage("git checkout"){
+            when{
+                branch:"master"
+            }
+            steps{
+                sh "mvn clean package"
+            }
+        }
+    }
+}
